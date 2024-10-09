@@ -1,9 +1,32 @@
+<!DOCTYPE html>
 <header id="store">
   <h1>Greengrocers</h1>
-  <!-- your store here -->
+  <ul class="store--item-list">
+    <li *ngFor="let grocery of groceries">
+      <div class="store--item-icon">
+        <img [src]="'assets/icons/' + grocery.id + '.svg'">
+      </div>
+      <p>£{{ grocery.price.toFixed(2) }}</p>
+      <button (click)="addToCart(grocery)">Add to cart</button>
+    </li>
+  </ul>
 </header>
 <main id="cart">
   <h2>Your Cart</h2>
-  <!-- your cart here -->
-  <!-- your total here -->
+  <div class="cart--item-list-container">
+    <ul class="item-list cart--item-list">
+      <li *ngFor="let c of cart">
+        <div class="cart--item-icon">
+          <img [src]="'assets/icons/' + c.item.id + '.svg'">
+        </div>
+        <p>{{ c.item.name }}</p>
+        <button class="quantity-btn remove-btn center" (click)="decreaseItem(c.item.id)">-</button>
+        <span class="quantity-text center">{{ c.quantity }}</span>
+        <button class="quantity-btn add-btn center" (click)="increaseItem(c.item.id)">+</button>
+      </li>
+    </ul>
+  </div>
+  <div class="total-section">
+    <h3>Total: £{{ getCartSum().toFixed(2) }}</h3>
+  </div>
 </main>

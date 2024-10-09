@@ -13,7 +13,7 @@ Use what you've learned to:
 
 ## The Groceries API
 
-You will be fetching a list of groceries from an external API. [You can read the docs here](https://boolean-api-server.fly.dev/api-docs/#/groceries)
+You will be fetching a list of groceries from an external API. [You can read the docs here](https://boolean-uk-api-server.fly.dev/api-docs/#/groceries)
 
 ## Setup
 
