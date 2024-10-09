@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <header id="store">
   <h1>Greengrocers</h1>
+  <div class="filtersAndSortings">
+    <button class="filterButton" (click)="nextFilter()">{{ filterToText() }}</button>
+    <button class="sortingButton" (click)="nextSort()">{{ sortToText() }}</button>
+  </div>
   <ul class="store--item-list">
-    <li *ngFor="let grocery of groceries">
+    <li *ngFor="let grocery of filteredList()">
       <div class="store--item-icon">
         <img [src]="'assets/icons/' + grocery.id + '.svg'">
       </div>

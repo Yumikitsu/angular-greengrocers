@@ -1,1 +1,18 @@
 
+/* Own stuff */
+
+.filtersAndSortings {
+    display: flex;
+    justify-content: center;
+    margin-left: 2.1rem;
+}
+  
+.filterButton {
+    width: 100px;
+    margin-right: 175px;
+}
+  
+.sortingButton {
+    width: 100px;
+    margin-left: 150px;
+}
